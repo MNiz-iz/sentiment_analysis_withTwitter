@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main class="main" id="top">
+<div class="bg-dark"><img class="img-fluid position-absolute end-0" src="{{ url_for('static', filename='assets/img/hero/hero-bg.png')}}" alt="" />
+<!-- <section> begin -->
+<section>
+    <div class="container">
+        <div class="border-bottom border-dark py-7">
+        <div class="row align-items-center gx-xl-7">
+            <div class="col-lg-6 text-center"><a>
+                <img class="img-fluid zoomE" src="{{url_for('static', filename='img/01_genAllwordcloud.png')}}" alt="" /></a>                    
+                <p class="text-white mt-2">&#127774; Generate WordCloud</p>
+            </div>
+            <div class="col-lg-6 mt-lg-99 text-center text-lg-start"><a href="#">
+                <h1 class="fw-bold mb-0 text-white py-lg-0 py-0">Keyword : {{ keyword }}
+                </h1>
+            </a>
+            <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-2"><a>
+                <p class="mb-0 py-2 fw-bold">Results at </p>
+                </a>
+                <p class="mb-0"><span id='date-time'></span>.</p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div><!-- end of .container-->
+
+        <div class="container">
+            <div class="row mt-1">
+
+                <div class="col-md-4 col-sm-6 mb-5 mb-lg-0 text-center" ><a>
+                    <img class="img-fluid zoomE" src="{{url_for('static', filename='img/02_genPOSwordcloud.png')}}" alt="" /></a>
+                    <p class="text-white mt-2">&#128512; Positive WordCloud</p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 mb-5 mb-lg-0 text-center "><a>
+                    <img class="img-fluid zoomE" src="{{url_for('static', filename='img/03_genNEGwordcloud.png')}}" alt="" /></a>
+                    <p class="text-white mt-2">&#128545; Nagative WordCloud</p>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-5 mb-lg-0 text-center "><a>
+                    <img class="img-fluid zoomE" src="{{url_for('static', filename='img/04_genNEUwordcloud.png')}}" alt="" /></a>
+                    <p class="text-white mt-2">&#128528; Neutral WordCloud</p>
+                </div>
+            </div>
+
+<!--            <div class="border-bottom border-dark py-7">
+                <div class="row align-items-center gx-xl-7">
+                    <div class="col-lg-6 text-center"><a>
+                        <img class="img-fluid zoomE" src="{{url_for('static', filename='img/05_getsum.png')}}" alt="" /></a>                    
+                        <p class="text-white mt-2">&#128202; Sentiment Analysis (number of tweets in this Keyword : {{ keyword }})</p>
+                    </div>
+                </div>
+            </div>>
+-->
+
+    </section>
+    <!-- <section> close -->
+
+</div>
+</main>
+
+    <script>
+        var dt = new Date();
+        document.getElementById('date-time').innerHTML=dt;
+    </script>
+
+{% endblock %}
+
+</body>
+</html>

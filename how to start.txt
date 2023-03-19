@@ -1,0 +1,14 @@
+1.start mongo
+: cmd > cd C:\Program Files\MongoDB\Server\4.2\bin (path of bin MongoDB)
+: start mongod > mongod.exe
+: new cmd > cd C:\Program Files\MongoDB\Server\4.2\bin (path of bin MongoDB)
+: start mongo.exe > mongo.exe
+
+2. create virtual environment for run flask in cmd(vs code) *env คือ 
+D:path> python -m venv envbd
+(envbd) D:path> envbd\scripts\activate
+(envbd) D:path> pip install -r requirements.txt
+(envbd) D:path> py app.py
+
+
+( Python versions 3.8.10)

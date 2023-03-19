@@ -1,0 +1,11 @@
+flask
+pymongo
+tweepy
+pythainlp
+wordcloud
+Matplotlib
+Pandas
+textblob
+flask_mongoengine
+emoji
+flask_cors
